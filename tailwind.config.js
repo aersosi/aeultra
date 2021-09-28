@@ -1,20 +1,25 @@
 module.exports = {
-    mode: "jit",
+    mode: 'jit',
     purge: {
-        mode: "all",
-        content: ["./**/*.html"],
-        options: {
-            whitelist: [],
-        },
+        mode: 'all',
+        preserveHtmlElements: false,
+        content: [
+            './src/**/*.html',
+            './src/**/*.scss',
+            './src/**/*.md'
+        ]
     },
+    darkMode: false,
     theme: {
-        container: {
-            center: true,
-        },
-        extend: {
-            colors: {},
-        },
+        extend: {},
     },
-    variants: {},
-    // plugins: [require("@tailwindcss/typography")],
+    variants: {
+        extend: {},
+    },
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/line-clamp'),
+        require('@tailwindcss/aspect-ratio'),
+    ],
 };
