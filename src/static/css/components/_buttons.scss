@@ -1,0 +1,10 @@
+@use '../abstract/variables' as vars;
+
+@each $key in map-keys(vars.$gray-palette-keys) {
+  .ae-btn {
+    &.gray-#{$key} {
+      background-color: map-get(vars.$gray-palette, $key);
+      color: map-get(vars.$gray-palette, contrast, $key);
+    }
+  }
+}

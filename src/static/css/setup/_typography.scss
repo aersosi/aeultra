@@ -1,0 +1,17 @@
+@use "../abstract/variables" as vars;
+@use 'sass:map';
+
+
+:root {
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Mono', monospace;
+}
+
+body {
+  font-family: var(--sans);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--mono);
+}
