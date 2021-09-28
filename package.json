@@ -4,8 +4,8 @@
     "eleventy": "eleventy --watch",
     "debug": "set DEBUG=* & eleventy",
     "sass": "sass src/static/css/index.scss src/static/css/index.css --watch",
-    "css": "postcss src/static/css/index.css --output _site/static/css/index.css --watch",
-    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/index.css --output _site/static/css/index.css",
+    "css": "postcss src/static/css/index.css --o _site/static/css/index.css --watch",
+    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/index.css --o _site/static/css/index.css",
     "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open"
   },
   "browserslist": [

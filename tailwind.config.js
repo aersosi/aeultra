@@ -1,6 +1,7 @@
 module.exports = {
     mode: "jit",
     purge: {
+        mode: "all",
         content: ["./**/*.html"],
         options: {
             whitelist: [],
