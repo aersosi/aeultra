@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --mono: "IBM Plex Mono", monospace;
+  --sans: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  font-family: var(--sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--mono);
+}
+
+/* Syntax Highlighting*/
+body :not(pre) > code[class*=language-],
+body pre[class*=language-] {
+  @apply bg-gray-800;
+  background: #333333;
+}
+
+@layer components {
+  .btn-gray-100 {
+    background-color: #E6E6E6;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .btn-gray-300 {
+    background-color: #B8B8B8;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .btn-gray-500 {
+    background-color: #8C8C8C;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .btn-gray-700 {
+    background-color: #5F5F5F;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .btn-gray-900 {
+    background-color: #333333;
+    color: rgba(0, 0, 0, 0.87);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

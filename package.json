@@ -30,5 +30,7 @@
     "prismjs": "^1.21.0",
     "tailwindcss": "^2.2.16"
   },
-  "dependencies": {}
+  "dependencies": {
+    "sass": "^1.42.1"
+  }
 }
