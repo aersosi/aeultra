@@ -1,17 +1,99 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
-  --mono: "IBM Plex Mono", monospace;
-  --sans: "IBM Plex Sans", sans-serif;
-}
-
 body {
   font-family: var(--sans);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--mono);
+.ae-typo .headline1 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 4.5rem;
+  letter-spacing: -1.5px;
+}
+
+.ae-typo .headline2 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 3.5rem;
+  letter-spacing: -0.5px;
+}
+
+.ae-typo .headline3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 0;
+}
+
+.ae-typo .headline4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.25px;
+}
+
+.ae-typo .headline5 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+}
+
+.ae-typo .headline6 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.15px;
+}
+
+.ae-typo .subtitle1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.15px;
+}
+
+.ae-typo .subtitle2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.1px;
+}
+
+.ae-typo .body1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.ae-typo .body2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.25px;
+}
+
+.ae-typo .button {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 1.25px;
+}
+
+.ae-typo .caption {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.4px;
+}
+
+.ae-typo .overline {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: 0.625rem;
+  letter-spacing: 1.5px;
 }
 
 /* Syntax Highlighting*/

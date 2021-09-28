@@ -1,17 +1,113 @@
 @use "../utils/variables" as vars;
 @use 'sass:map';
+@use 'sass:string';
 
-
-:root {
-  --mono: 'IBM Plex Mono', monospace;
-  --sans: 'IBM Plex Sans', sans-serif;
-}
 
 body {
   font-family: var(--sans);
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--mono);
+
+$typo-styles: (
+  "headline1" : "h1",
+  "headline2" : "h2",
+  "headline3" : "h3",
+  "headline4" : "h4",
+  "headline5" : "h5",
+  "headline6" : "h6",
+  "subtitle1" : "div, span",
+  "subtitle2" : "div. span",
+  "body1" : "p",
+  "body2" : "p",
+  "button" : "button",
+  "caption" : "caption",
+  "overline" : "small",
+  selector: (
+    "headline1" : "h1",
+    "headline2" : "h2",
+    "headline3" : "h3",
+    "headline4" : "h4",
+    "headline5" : "h5",
+    "headline6" : "h6",
+    "subtitle1" : "strong",
+    "subtitle2" : "strong",
+    "body1" : "p",
+    "body2" : "p",
+    "button" : "button",
+    "caption" : "caption",
+    "overline" : "small",
+  ),
+  family: (
+    "headline1" : string.unquote("'IBM Plex Mono', monospace"),
+    "headline2" : string.unquote("'IBM Plex Mono', monospace"),
+    "headline3" : string.unquote("'IBM Plex Mono', monospace"),
+    "headline4" : string.unquote("'IBM Plex Mono', monospace"),
+    "headline5" : string.unquote("'IBM Plex Mono', monospace"),
+    "headline6" : string.unquote("'IBM Plex Mono', monospace"),
+    "subtitle1" : string.unquote("'IBM Plex Sans', sans-serif"),
+    "subtitle2" : string.unquote("'IBM Plex Sans', sans-serif"),
+    "body1" : string.unquote("'IBM Plex Sans', sans-serif"),
+    "body2" : string.unquote("'IBM Plex Sans', sans-serif"),
+    "button" : string.unquote("'IBM Plex Mono', monospace"),
+    "caption" : string.unquote("'IBM Plex Sans', sans-serif"),
+    "overline" : string.unquote("'IBM Plex Mono', monospace"),
+  ),
+  weight: (
+    "headline1" : 500,
+    "headline2" : 500,
+    "headline3" : 600,
+    "headline4" : 600,
+    "headline5" : 700,
+    "headline6" : 700,
+    "subtitle1" : 500,
+    "subtitle2" : 600,
+    "body1" : 400,
+    "body2" : 400,
+    "button" : 600,
+    "caption" : 400,
+    "overline" : 400,
+  ),
+  size: (
+    "headline1" : 4.5rem,
+    "headline2" : 3.5rem,
+    "headline3" : 2.5rem,
+    "headline4" : 2rem,
+    "headline5" : 1.5rem,
+    "headline6" : 1.25rem,
+    "subtitle1" : 1rem,
+    "subtitle2" : 0.875rem,
+    "body1" : 1rem,
+    "body2" : 0.875rem,
+    "button" : 0.875rem,
+    "caption" : 0.75rem,
+    "overline" : 0.625rem,
+  ),
+  spacing: (
+    "headline1" : -1.5px,
+    "headline2" : -0.5px,
+    "headline3" : 0,
+    "headline4" : 0.25px,
+    "headline5" : 0,
+    "headline6" : 0.15px,
+    "subtitle1" : 0.15px,
+    "subtitle2" : 0.1px,
+    "body1" : 0.5px,
+    "body2" : 0.25px,
+    "button" : 1.25px,
+    "caption" : 0.4px,
+    "overline" : 1.5px,
+  ),
+);
+
+$typo-styles-keys: map-remove($typo-styles, family, weight, size);
+
+
+@each $key, $value in $typo-styles-keys{
+  .ae-typo .#{$key} {
+    font-family: map.get($typo-styles, family, $key);
+    font-weight: map.get($typo-styles, weight, $key);
+    font-size: map.get($typo-styles, size, $key);
+    letter-spacing: map.get($typo-styles, spacing, $key);
+  }
 }

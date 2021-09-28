@@ -7,7 +7,7 @@ layout: blog
 
     {% for post in postslist | reverse %}
         <article class="my-8">
-            <h2 class="font-bold text-3xl text-gray-900 mb-2">
+            <h2 class="headline4 mb-3">
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
                         {{ post.data.title }}
@@ -16,21 +16,21 @@ layout: blog
                     {% endif %}
                 </a>
             </h2>
-            <p class="text-base leading-6 text-gray-500 mb-3">
+            <p class="subtitle1 mb-4">
                 <time>
                     {{ post.date | readableDate }}
                     by
-                    <a>{{ post.data.author }}</a>
+                    <a class="text-indigo-500">{{ post.data.author }}</a>
 
                 </time>
             </p>
             {% if post.data.description %}
-                <p class="text-lg text-gray-500 mb-3">
+                <p class="body1 mb-3">
                     {{ post.data.description }}
                 </p>
             {% endif %}
 
-            <p>
+            <p class="body1">
                 <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
                     Read more →
                 </a>
