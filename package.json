@@ -1,14 +1,13 @@
 {
   "scripts": {
-    "start": "npm-run-all --parallel styles eleventy browsersync",
+    "start": "npm-run-all --parallel sass css eleventy browsersync",
 
-    "styles": "npm run sass && npm run css",
-    "sass": "sass src/static/css/index.scss src/static/css/index.scss --watch",
-    "css": "postcss src/static/css/index.scss --o _site/static/css/style.css --watch",
+    "sass": "sass src/static/css/index.scss src/static/css/index.css --watch",
+    "css": "postcss src/static/css/index.css --o _site/static/css/style.css --watch",
 
     "eleventy": "eleventy --watch",
     "debug": "set DEBUG=* & eleventy",
-    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/index.scss --o _site/static/css/style.css",
+    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/index.css --o _site/static/css/style.css",
     "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open"
   },
   "devDependencies": {

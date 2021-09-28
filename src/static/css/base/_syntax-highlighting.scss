@@ -1,0 +1,10 @@
+@use "../utils/variables" as vars;
+@use 'sass:map';
+
+
+/* Syntax Highlighting*/
+body :not(pre) > code[class*="language-"],
+body pre[class*="language-"] {
+  @apply bg-gray-800;
+  background: map.get(vars.$gray-palette, 900);
+}

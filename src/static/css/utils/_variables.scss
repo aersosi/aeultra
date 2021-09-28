@@ -1,0 +1,64 @@
+$black-opacity-87: rgba(black, 0.87);
+$black-opacity-62: rgba(black, 0.62);
+$black-opacity-37: rgba(black, 0.37);
+$black-opacity-25: rgba(black, 0.25);
+$black-opacity-12: rgba(black, 0.12);
+
+$white-opacity-87: rgba(white, 0.87);
+$white-opacity-62: rgba(white, 0.62);
+$white-opacity-37: rgba(white, 0.37);
+$white-opacity-25: rgba(white, 0.25);
+$white-opacity-12: rgba(white, 0.12);
+
+
+$green-palette: (
+        100 : #CCFFCC,
+        300 : #80FF80,
+        500: #00F200,
+        700: #00B200,
+        900: #007200,
+        contrast: (
+                100 : $black-opacity-87,
+                300 : $black-opacity-87,
+                500: $black-opacity-87,
+                700: $black-opacity-87,
+                900: $black-opacity-87,
+        )
+);
+
+$green-palette-keys: map-remove($green-palette, contrast);
+
+$purple-palette: (
+        100 : #E9D9FF,
+        300 : #BB80FF,
+        500: #7C00FF,
+        700: #5300BF,
+        900: #31007F,
+        contrast: (
+                100 : $black-opacity-87,
+                300 : $black-opacity-87,
+                500: $black-opacity-87,
+                700: $black-opacity-87,
+                900: $black-opacity-87,
+        )
+);
+
+$purple-palette-keys: map-remove($purple-palette, contrast);
+
+
+$gray-palette: (
+        100 : #E6E6E6,
+        300 : #B8B8B8,
+        500: #8C8C8C,
+        700: #5F5F5F,
+        900: #333333,
+        contrast: (
+                100 : $black-opacity-87,
+                300 : $black-opacity-87,
+                500: $black-opacity-87,
+                700: $black-opacity-87,
+                900: $black-opacity-87,
+        )
+);
+
+$gray-palette-keys: map-remove($gray-palette, contrast);
