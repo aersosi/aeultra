@@ -1,6 +1,11 @@
 {
   "scripts": {
-    "start": "npm-run-all --parallel sass css eleventy browsersync",
+    "start": "npm-run-all --parallel styles eleventy browsersync",
+
+    "styles": "npm run sass && npm run css",
+    "sass": "sass src/static/css/index.scss src/static/css/index.scss --watch",
+    "css": "postcss src/static/css/index.scss --o _site/static/css/style.css --watch",
+
     "eleventy": "eleventy --watch",
     "debug": "set DEBUG=* & eleventy",
     "sass": "sass src/static/css/index.scss src/static/css/index.css --watch",
