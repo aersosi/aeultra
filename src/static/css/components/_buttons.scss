@@ -8,4 +8,16 @@
   }
 }
 
+@each $key in map-keys(vars.$green-palette-keys) {
+  .btn-green-#{$key} {
+    background-color: map-get(vars.$green-palette, $key);
+    color: map-get(vars.$green-palette, contrast, $key);
+  }
+}
 
+@each $key in map-keys(vars.$purple-palette-keys) {
+  .btn-purple-#{$key} {
+    background-color: map-get(vars.$purple-palette, $key);
+    color: map-get(vars.$purple-palette, contrast, $key);
+  }
+}
