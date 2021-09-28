@@ -9,7 +9,7 @@
 - [Tailwind CSS](https://tailwindcss.com/)
 
 
-
+Update tailwind: https://github.com/ThirusOfficial/install-tailwind-css-v2.2
 
 ### 4\. Build the project to generate the first CSS
 
