@@ -1,7 +1,7 @@
-@use "setup/syntax-highlighting";
-@use "setup/typography";
+@import "setup/syntax-highlighting";
+@import "setup/typography";
 
-@use "components/buttons";
+@import "components/buttons";
 
 @import "setup/tailwind";
 
