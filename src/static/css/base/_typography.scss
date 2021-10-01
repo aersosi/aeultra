@@ -3,9 +3,7 @@
 @use 'sass:string';
 
 
-body {
-  font-family: var(--sans);
-}
+
 
 
 
@@ -112,4 +110,9 @@ $typo-styles-keys: map-remove($typo-styles, family, weight, size);
     font-size: map.get($typo-styles, size, $key);
     letter-spacing: map.get($typo-styles, spacing, $key);
   }
+}
+
+
+body {
+  font-family: map.get($typo-styles, family, 'body');
 }
