@@ -1,8 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  font-family: var(--sans);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+::-webkit-scrollbar {
+  --scrollbar-width: 0.5rem;
+}
+
+/* Syntax Highlighting*/
+body :not(pre) > code[class*=language-],
+body pre[class*=language-] {
+  background: #333333;
 }
 
 .ae-typo .headline1 {
@@ -94,13 +122,6 @@ body {
   font-weight: 400;
   font-size: 0.625rem;
   letter-spacing: 1.5px;
-}
-
-/* Syntax Highlighting*/
-body :not(pre) > code[class*=language-],
-body pre[class*=language-] {
-  @apply bg-gray-800;
-  background: #333333;
 }
 
 @layer components {

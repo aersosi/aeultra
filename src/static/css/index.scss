@@ -5,8 +5,13 @@
 @tailwind utilities;
 
 
-@import "base/typography";
+@import "base/tailwind";
+
+
+@import "base/focus";
+@import "base/scrollbar";
 @import "base/syntax-highlighting";
+@import "base/typography";
 
 @layer components {
   @import "components/buttons";

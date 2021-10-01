@@ -1,0 +1,9 @@
+// remove focus on click
+button:focus {
+  outline: none;
+}
+
+// keep focus on keyboard tab
+button:focus-visible {
+  outline: 5px auto -webkit-focus-ring-color;
+}
