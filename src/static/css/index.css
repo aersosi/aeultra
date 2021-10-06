@@ -126,78 +126,78 @@ body pre[class*=language-] {
 
 @layer components {
   .btn-gray-100 {
-    background-color: #E6E6E6;
+    background-color: #e6e6e6;
     color: rgba(0, 0, 0, 0.87);
   }
 
   .btn-gray-300 {
-    background-color: #B8B8B8;
+    background-color: #b8b8b8;
     color: rgba(0, 0, 0, 0.87);
   }
 
   .btn-gray-500 {
-    background-color: #8C8C8C;
+    background-color: #8b8b8b;
     color: rgba(0, 0, 0, 0.87);
   }
 
   .btn-gray-700 {
-    background-color: #5F5F5F;
-    color: rgba(0, 0, 0, 0.87);
+    background-color: #5f5f5f;
+    color: rgba(255, 255, 255, 0.87);
   }
 
   .btn-gray-900 {
     background-color: #333333;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
   }
 
   .btn-green-100 {
-    background-color: #CCFFCC;
+    background-color: #ccffcc;
     color: rgba(0, 0, 0, 0.87);
   }
 
   .btn-green-300 {
-    background-color: #80FF80;
+    background-color: #76f876;
     color: rgba(0, 0, 0, 0.87);
   }
 
   .btn-green-500 {
-    background-color: #00F200;
+    background-color: #2cde2c;
     color: rgba(0, 0, 0, 0.87);
   }
 
   .btn-green-700 {
-    background-color: #00B200;
-    color: rgba(0, 0, 0, 0.87);
+    background-color: #06af06;
+    color: rgba(255, 255, 255, 0.87);
   }
 
   .btn-green-900 {
     background-color: #007200;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
   }
 
   .btn-purple-100 {
-    background-color: #E9D9FF;
+    background-color: #e9d9ff;
     color: rgba(0, 0, 0, 0.87);
   }
 
   .btn-purple-300 {
-    background-color: #BB80FF;
+    background-color: #b67afb;
     color: rgba(0, 0, 0, 0.87);
   }
 
   .btn-purple-500 {
-    background-color: #7C00FF;
-    color: rgba(0, 0, 0, 0.87);
+    background-color: #832de7;
+    color: rgba(255, 255, 255, 0.87);
   }
 
   .btn-purple-700 {
-    background-color: #5300BF;
-    color: rgba(0, 0, 0, 0.87);
+    background-color: #5606bb;
+    color: rgba(255, 255, 255, 0.87);
   }
 
   .btn-purple-900 {
-    background-color: #31007F;
-    color: rgba(0, 0, 0, 0.87);
+    background-color: #31007f;
+    color: rgba(255, 255, 255, 0.87);
   }
 }
 

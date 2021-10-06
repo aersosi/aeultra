@@ -1,10 +1,12 @@
 ---
 items:
-  - text: Menu One
+  - text: What?
     url: "#"
-  - text: Menu Two
+  - text: How?
     url: "#"
-  - text: Menu Three
+  - text: Why?
     url: "#"
-  - text: Articles
+  - text: See
+    url: "#"
+  - text: Read
     url: "/articles"
