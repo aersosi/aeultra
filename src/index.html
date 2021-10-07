@@ -1,27 +1,27 @@
 ---
-layout: default
-title: Design && Dev
+layout: default_template
+title: Design && Development
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col">
-  <h2 class="mt-32">
-    <span class="bg-purple-500 text-white px-4 mt-32">What?</span>
-  </h2>
-  <h1 class="headline2 flex flex-col">
-    <span>Hy, I'm Arthur and I do both.</span>
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-purple-500">
-      –  {{title}}
-    </strong>
-  </h1>
+<main class="container flex flex-col mx-auto">
+    <section>
+        {% include "./_includes/partials/1_what.html" %}
+    </section>
 
-  <div class="subtitle1">
-    <p>People describe me as curious, adaptable and receptive.</p>
-    <p>My current focus is on Frontend Development and UI/UX/UW.</p>
-    <p>See some of my <a href="#" class="inline-link bg-green-500">projects</a>
-      , read one of my <a href="#" class="inline-link bg-green-500">articles</a>
-      or contact me at <a href="#" class="inline-link bg-green-500">hi@rtur.io</a>.</p>
-  </div>
+    <section>
+        {% include "./_includes/partials/2_how.html" %}
+    </section>
 
-  {% include "./_includes/partials/content.html" %}
-</div>
+    <section>
+        {% include "./_includes/partials/3_why.html" %}
+    </section>
+
+    <section>
+        {% include "./_includes/partials/4_see.html" %}
+    </section>
+
+    <section>
+        {% include "./_includes/partials/5_read.html" %}
+    </section>
+</main>
