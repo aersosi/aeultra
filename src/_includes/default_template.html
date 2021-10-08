@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="snap-y">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -28,11 +28,10 @@
 {% include "./partials/nav_desktop.html" %}
 {% include "./partials/nav_mobile.html" %}
 
+<div class="">
 {{ content | safe }}
-
 {% include "./partials/footer.html" %}
-
-
+</div>
 
 
 <script src="/static/js/alpine.js"></script>

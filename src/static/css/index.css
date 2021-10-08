@@ -27,6 +27,20 @@ button:focus-visible {
   --scrollbar-width: 0.5rem;
 }
 
+.snap-y {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.snap-end {
+  scroll-snap-align: end;
+}
+
 /* Syntax Highlighting*/
 body :not(pre) > code[class*=language-],
 body pre[class*=language-] {

@@ -1,45 +1,51 @@
 <!--Nav desktop-->
-<nav class="fixed w-full">
-    <div class="flex container justify-between mx-auto">
-        <!--Logo etc-->
-        <div class="flex items-center">
-            <a href="/" class="text-purple-500 font-bold text-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 48" class="w-20">
-                    <defs>
-                        <style> svg .a {
-                            fill: #7c00ff;
-                            transition: fill .2s ease;
-                        } svg:hover .a {
-                             fill: #2cde2c;
-                         }
-                        </style>
-                    </defs>
-                    <path class="a"
-                          d="M48,38V12A12,12,0,0,0,36,0H4V8H36a4,4,0,0,1,4,4v1.5L5,29.9A9.5,9.5,0,0,0,1.4,43.2,9.7,9.7,0,0,0,10,48H34a8,8,0,0,0,7.9-7H43v5a2,2,0,0,0,2,2h3ZM36,40H9.7a1.9,1.9,0,0,1-1.5-.9,1.6,1.6,0,0,1,.7-2.2L40,22.3V36A4,4,0,0,1,36,40Z"/>
-                    <path class="a"
-                          d="M100,48H68A12,12,0,0,1,56,36V12A12,12,0,0,1,68,0H94.3A9.9,9.9,0,0,1,103,5.3a9.6,9.6,0,0,1-4,12.8L64,34.4V36a4,4,0,0,0,4,4h32ZM68,8a4,4,0,0,0-4,4V25.2L95.1,11.1a1.6,1.6,0,0,0,.7-2.2A1.9,1.9,0,0,0,94.3,8Z"/>
-                </svg>
+<header>
+    <nav class="fixed w-full bg-green-500">
+        <div class="container mx-auto py-8 px-4 sm:px-8">
+            <div class="flex justify-between">
+                <!--Logo etc-->
+                <div class="flex items-center">
+                    <a href="/" class="text-purple-500 font-bold text-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 48" class="w-20">
+                            <defs>
+                                <style> svg .a {
+                                    fill: #7c00ff;
+                                    transition: fill .2s ease;
+                                }
+
+                                svg:hover .a {
+                                    fill: #2cde2c;
+                                }
+                                </style>
+                            </defs>
+                            <path class="a"
+                                  d="M48,38V12A12,12,0,0,0,36,0H4V8H36a4,4,0,0,1,4,4v1.5L5,29.9A9.5,9.5,0,0,0,1.4,43.2,9.7,9.7,0,0,0,10,48H34a8,8,0,0,0,7.9-7H43v5a2,2,0,0,0,2,2h3ZM36,40H9.7a1.9,1.9,0,0,1-1.5-.9,1.6,1.6,0,0,1,.7-2.2L40,22.3V36A4,4,0,0,1,36,40Z"/>
+                            <path class="a"
+                                  d="M100,48H68A12,12,0,0,1,56,36V12A12,12,0,0,1,68,0H94.3A9.9,9.9,0,0,1,103,5.3a9.6,9.6,0,0,1-4,12.8L64,34.4V36a4,4,0,0,0,4,4h32ZM68,8a4,4,0,0,0-4,4V25.2L95.1,11.1a1.6,1.6,0,0,0,.7-2.2A1.9,1.9,0,0,0,94.3,8Z"/>
+                        </svg>
 
 
-            </a>
-        </div>
+                    </a>
+                </div>
 
 
-        <!--Menu-->
-        <div class="w-full">
-            <div class="w-full text-center">
+                <!--Menu-->
+                <div class="w-full">
+                    <div class="w-full text-center">
 
-                {% if navigation.items %}
-                <ul class="list-reset flex justify-end gap-2">
-                    {% for item in navigation.items %}
-                    <li class="nav__item bg-gray-100">
-                        <a class="text-ml inline-block text-gray-500 no-underline hover:text-purple-500 py-2 px-4"
-                           href="{{ item.url }}">{{ item.text }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
+                        {% if navigation.items %}
+                        <ul class="list-reset flex justify-end gap-2">
+                            {% for item in navigation.items %}
+                            <li class="nav__item bg-gray-100">
+                                <a class="text-ml inline-block text-gray-500 no-underline hover:text-purple-500 py-2 px-4"
+                                   href="{{ item.url }}">{{ item.text }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>

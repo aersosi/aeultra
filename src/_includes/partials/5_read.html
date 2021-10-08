@@ -1,60 +1,63 @@
-<h2 class="mt-32">
-    <span class="bg-purple-500 text-white px-4 mt-32">Read</span>
-</h2>
+<div class="container mx-auto py-32 px-4 sm:px-8">
+<h2>
+        <span class="bg-purple-500 text-white px-4 mt-32">Read</span>
+    </h2>
 
-<div class="subtitle1 flex flex-col gap-4">
-    <h3>Subheadline</h3>
-    <div class="w-full grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div class="subtitle1 flex flex-col gap-4">
+        <h3>Subheadline</h3>
+        <div class="w-full grid grid-cols-1 md:grid-cols-4 gap-4">
 
-        {% set articleslist = collections.article %}
-        {% for article in articleslist | reverse %}
-        <article class="p-4 border rounded border-gray-300 hover:border-purple-500">
-            <div class="flex flex-col gap-4">
-                <!--Title -->
-                <h3 class="subtitle1">
-                    <p>
-                        {% if article.data.title %}
-                        {{ article.data.title }}
-                        {% else %}
-                        Untitled
-                        {% endif %}
+            {% set articleslist = collections.article %}
+            {% for article in articleslist | reverse %}
+            <article class="p-4 border rounded border-gray-300 hover:border-purple-500">
+                <div class="flex flex-col gap-4">
+                    <!--Title -->
+                    <h3 class="subtitle1">
+                        <p>
+                            {% if article.data.title %}
+                            {{ article.data.title }}
+                            {% else %}
+                            Untitled
+                            {% endif %}
+                        </p>
+                    </h3>
+                    <!--Date-->
+                    <p class="subtitle2 mb-4">
+                        <time>
+                            {{ article.date | readableDate }}
+                            by
+                            <a class="text-purple-500">{{ article.data.author }}</a>
+
+                        </time>
                     </p>
-                </h3>
-                <!--Date-->
-                <p class="subtitle2 mb-4">
-                    <time>
-                        {{ article.date | readableDate }}
-                        by
-                        <a class="text-purple-500">{{ article.data.author }}</a>
 
-                    </time>
-                </p>
+                    <!--Description-->
+                    {% if article.data.keywords %}
+                    <p class="body1 mb-3">
+                        {{ article.data.keywords }}
+                    </p>
+                    {% endif %}
 
-                <!--Description-->
-                {% if article.data.keywords %}
-                <p class="body1 mb-3">
-                    {{ article.data.keywords }}
-                </p>
-                {% endif %}
+                    <!--Description-->
+                    {% if article.data.description %}
+                    <p class="body1 mb-3">
+                        {{ article.data.description }}
+                    </p>
+                    {% endif %}
 
-                <!--Description-->
-                {% if article.data.description %}
-                <p class="body1 mb-3">
-                    {{ article.data.description }}
-                </p>
-                {% endif %}
+                    <p class="body1">
+                        <a href="{{ article.url | url }}" class="text-purple-500 font-bold text-lg">
+                            Read more →
+                        </a>
+                    </p>
+                </div>
 
-                <p class="body1">
-                    <a href="{{ article.url | url }}" class="text-purple-500 font-bold text-lg">
-                        Read more →
-                    </a>
-                </p>
-            </div>
+            </article>
+            {% endfor %}
 
-        </article>
-        {% endfor %}
-
+        </div>
     </div>
+
 </div>
 
 
