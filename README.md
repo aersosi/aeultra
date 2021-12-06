@@ -29,7 +29,9 @@ npm start
 
 ## Author
 
-<!-- Surjith S M ( [@surjithctly](https://surjithctly.in/) ) -->
+[comment]: <> (Surjith S M &#40; [@surjithctly]&#40;https://surjithctly.in/&#41; &#41;)
+Arthur Ersosi
+
 
 
 ## Fonts In Use:
